@@ -1,4 +1,4 @@
-package rw.ac.mediaplayer;
+package rw.ac.main;
 
 import java.sql.*;
 
@@ -20,11 +20,11 @@ public class Main {
             //Delete query
 //            statement.execute("DELETE FROM contacts WHERE Name='Lebron James'");
             //Select query
-            statement.execute("SELECT * FROM contacts");
-            ResultSet resultSet = statement.getResultSet();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM contacts");
 
             System.out.println();
             System.out.println("Contacts");
+
             while(resultSet.next()){
                 System.out.println(
                         resultSet.getString("Name")+ " ---- "+
